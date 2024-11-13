@@ -1,0 +1,62 @@
+/* -------------------------------*/
+/* Style de la section main */
+/* -------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: inter , sans-serif;
+}
+
+body{
+    padding-inline: 50px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+header nav ul{ 
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 20px;
+}
+
+header nav ul li:hover{
+    color: rgb(0, 255, 0);
+    transition: color 0.5s;
+    transform: scale(1.1) ;    
+}
+
+header div{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+/* ------------------------------- */
+/* Style de la section main */
+/* -------------------------------*/
+
+main #firstSection{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/*-------------RESPONSIVE-------------*/
+/* Quand mon ecran descend en dessous de 400px, le css en bas se met en place*/
+@media screen and (max-width: 400px){
+    nav{
+        display: none;
+    }
+}
