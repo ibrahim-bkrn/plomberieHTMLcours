@@ -23,24 +23,57 @@
                 <li>Qui sommes-nous</li>
             </ul>
         </nav>
-        <div><button>Contactez-nous</button></div>
+        <div><button class="button">Contactez-nous</button></div>
     </header>
 
     <main>
         <section id="firstSection">
             <div>
-                <h1>La meilleur agence de plomberie pour vous</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quibusdam error accusantium atque earum ex quidem suscipit, vero repellat quisquam facilis natus assumenda dignissimos sed. Praesentium obcaecati fuga explicabo at.</p>
-                <button>Prenez votre devis</button>
+                <h1>La meilleur agence de plomberie<br> pour vous</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <br> Fugiat quibusdam error accusantium atque earum ex quidem suscipit,
+                    <br> vero repellat quisquam facilis </p>
+                <button class="button">Prenez votre devis</button>
             </div>
-            <img src="plumbing-professional-doing-his-job.jpg" alt="Image d'un plombier" width="400px"  >
+            <img src="plumbing-professional-doing-his-job.jpg" alt="Image d'un plombier" width="500px"  >
+        </section>
+
+        <section id="formContact">
+            <form action="lien php">
+                <h2>Prenez votre devis</h2>
+                <div>
+                    <label for="mailDevis">Email :</label>
+                    <input class="input" type="email" name="mailDevis" id="mailDevis" placeholder="example@gmail.com" required>
+                </div>
+                <div>
+                    <label for="description">Decrivez-nous votre problème : </label>
+                    <textarea class="input" id="description" name="description" rows="4" cols="50" placeholder="lorem ipsum amarichanduw"></textarea>
+                </div>
+                <div>
+                    <label for="dateDevis">Donnez-nous la date du RDV :</label>
+                    <input class="input" type="date" name="dateDevis" id="dateDevis" required>
+                </div>
+                <div>
+                    <label for="heureDevis">Donnez-nous l'heure du RDV que vous voulez fixez</label>
+                    <input class="input" type="email" name="heureDevis" id="heureDevis" placeholder="example@gmail.com" required>
+                </div>
+                <div>
+                    <label for="tel">Veuillez nous indiquez votre numéro de telephone : </label>
+                        <small>Format: +33 6 05 07 08 42</small>
+                    <input class="input" type="tel" name="tel" id="tel" maxlength="10" minlength="10" required>
+                </div>
+                <div id="submit"><button class="button" type="submit">Envoyez</button></div>
+            </form>
         </section>
     </main>
 
     <footer>
         <section id="firstSFooter">
-            <img src="testCours/12459.jpg" alt="logo du site">
+            <img src="12459.jpg" alt="logo du site" width="90px">
             <h3>Plomberie de clamart</h3>
+            <br>
+            <h6>07 69 66 13 15</h6>
+            <h6>plomberieClamart@gmail.com</h6>
         </section>
         <nav>
             <ul>
@@ -51,12 +84,12 @@
                 <li>CGV</li>
             </ul>
         </nav>
-        <section id="lassSFooter">
+        <section id="lastFooter">
              <form action="">
-                <h6>Name</h6>
-                <input type="text">
+                <label for="nom">Veuillez nous indiquez votre numéro de telephone : </label>
+                <input type="text" id="nom" name="nom" class="input">
                 <h6>email</h6>
-                <input type="text">
+                <input type="text" class="input">
              </form>
         </section>
     </footer>

@@ -5,18 +5,25 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: inter , sans-serif;
+    font-family: montserrat , sans-serif;
+}
+
+:root{
+    --backColorGrey: rgb(249, 249, 249);
 }
 
 body{
-    padding-inline: 50px;
+    background-color: var(--backColorGrey);
 }
+
 
 header{
     display: flex;
     align-items: center;
     gap: 50px;
-    padding: 20px;
+    padding: 0px;
+    padding-inline: 40px;
+    border-bottom: solid 1px black;
 }
 
 header nav ul{ 
@@ -25,33 +32,35 @@ header nav ul{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 16px;
-    gap: 20px;
+    gap: 30px;
+    cursor: pointer;
 }
 
 header nav ul li:hover{
-    color: rgb(0, 255, 0);
-    transition: color 0.5s;
-    transform: scale(1.1) ;    
+    color: rgb(87, 87, 87);
+    transition: color;
 }
 
 header div{
     display: flex;
     justify-content: flex-end;
-    width: 50%;
+    width: 60%;
 }
 
-/* ------------------------------- */
-/* Style de la section main */
-/* -------------------------------*/
-
-main #firstSection{
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    gap: 50px;
+.button{
+    cursor: pointer;
+    background-color: var(--backColorGrey);
+    padding: 7px;
+    padding-inline: 15px;
+    border-radius: 16px;
+    border: solid 1px black;
+    font-weight: 500;
 }
 
+.button:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
 
 /*-------------RESPONSIVE-------------*/
 /* Quand mon ecran descend en dessous de 400px, le css en bas se met en place*/
@@ -59,4 +68,125 @@ main #firstSection{
     nav{
         display: none;
     }
+}
+
+@media screen and (max-width: 1450px){
+    header div{
+        width: 50%;
+    }
+}
+
+/* ------------------------------- */
+/* Style de la section main */
+/* -------------------------------*/
+/* Style de la premiere section main */
+#firstSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border-bottom: solid 1px black;
+    padding-block: 100px;
+}
+
+#firstSection > div{
+    display: flex;
+    flex-direction: column; 
+    justify-content:left;
+    align-items: flex-start;
+    row-gap: 20px;   
+}
+
+#firstSection h1{
+    font-size: 32px;
+}
+
+/* Style de la premiere section main */
+#formContact{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px black;
+    padding-block: 100px;
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
+#formContact form{
+    background-color: rgb(23, 23, 23);
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#formContact form > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*gap: 10px;*/
+}
+
+#formContact form > div > input,
+#formContact form > div > textarea{
+    width: 100%;
+    margin-bottom:10px ;
+}
+
+#formContact form > div > label{
+    font-size: 14px;
+}
+
+#formContact form h2{
+    margin-bottom: 20px;
+}
+
+#submit{
+    width: auto;
+    margin-top: 20px;
+}
+
+.input{
+    padding: 8px;
+    border-radius: 5px;
+}
+/* ------------------------------- */
+/* Style de la section footer */
+/* -------------------------------*/
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
+    border-top: solid 1px black;
+    margin-top: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    gap: 200px;
+    padding-inline: 40px;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: none;
+    gap: 30px;
+}
+
+footer nav ul li{
+    cursor: pointer;
+}
+
+footer nav ul li:hover{
+    color: rgb(87, 87, 87);
+    transition: color;
+}
+
+
+
+#lastFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
 }
